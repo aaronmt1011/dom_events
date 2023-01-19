@@ -55,3 +55,19 @@ btn3.addEventListener('click', function (e) {
 btn3.addEventListener('click', function (e) {
     e.target.style.background = 'blue';
 });
+
+
+
+
+// Can also use querySelectorAll() to select a whole nodelist and to put them into 
+// an array, Below gets all button nodelist and places them into an array.
+const allDaBtns = document.querySelectorAll('button');
+
+// forEach() is used to iterate through the allDaBtns array.
+allDaBtns.forEach((button) => {
+
+    // .addEventListener() is used to detect when clicked and gives out alert.
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
